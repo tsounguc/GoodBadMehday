@@ -20,6 +20,14 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             d("Christian", "Hello ${editText.text}")
             helloMessage.text = " Hello ${editText.text}"
+
+            if(editText.text.toString() == "bad"){
+                customImage.setImageResource(R.drawable.badday)
+            }else if(editText.text.toString() == "good"){
+                customImage.setImageResource(R.drawable.goodday)
+            }else{
+                customImage.setImageResource(R.drawable.mehday)
+            }
         }
     }
 }
